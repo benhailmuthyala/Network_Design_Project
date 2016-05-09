@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>iOS Orientation Test</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <style>
+                    .Logo {
+                        font-family: sans-serif;
+                        font-size: 16px;
+                        text-decoration:none;
+                        line-height: 3;
+                        letter-spacing:3px;
+                        color:#555555;
+                        display:block;
+                        position:absolute;
+                        top:1%;
+                        left:7%;
+                        padding-left:2px;
+                    }
+                #Logo {
+                    width:414px;
+                    height:66px;
+                }
+                #bdiv {
+                    width: 414px;
+                    height:46px;
+                }
+                #btn {
+                    visibility: hidden;
+                    margin-left: 25%;
+                    margin-top: 4px;
+                }
+                #Cbtn {
+                    visibility: hidden;
+                    margin-top: 4px;
+                }
+                </style>
+                </head>
+    <script>
+        var numOrientationChanges = 0,
+        lastOrientation,
+        startTime = + new Date(),
+        timer;
+        
+        
+        function Visibility() {
+            document.getElementById("btn").style.visibility = "hidden"
+            document.getElementById("Cbtn").style.visibility = "hidden"
+            
+        }
+    
+    
+    function readDeviceOrientation() {
+        
+        var orientationLabel,
+        curTime = + new Date() - startTime;
+        
+        if (Math.abs(window.orientation) === 90) {
+            // Landscape
+            document.getElementById("btn").href="./App3.html";
+            document.getElementById("btn").style.visibility = "visible"
+            document.getElementById("Cbtn").style.visibility = "visible"
+            // Landscape+ game
+        } else {
+            // Portrait
+            document.getElementById("btn").href="./App2.html";
+            document.getElementById("btn").style.visibility = "visible"
+            document.getElementById("Cbtn").style.visibility = "visible"
+        }
+        
+        if (lastOrientation !== window.orientation) {
+            
+            if (numOrientationChanges === 0) {
+                document.getElementById("btn").href="./App2.html";
+                document.getElementById("btn").style.visibility = "visible";
+                document.getElementById("Cbtn").style.visibility = "visible";
+                
+            } else if (numOrientationChanges === 1) {
+                document.getElementById("btn").href="./index.html";
+                document.getElementById("btn").style.visibility = "visible";
+                document.getElementById("Cbtn").style.visibility = "visible";
+            }
+            lastOrientation = window.orientation;
+            numOrientationChanges += 1;
+        }
+    }
+    
+    window.onorientationchange = readDeviceOrientation;
+    
+        </script>
+    
+    <meta name="author" content="Gopherwood Studios: Derek Detweiler and Todd Lewis. http://gopherwoodstudios.com">
+        <meta name="keywords" http-equiv="keywords" content="[head-keywords]">
+            <meta name="description" content="[head-description]">
+                <meta http-equiv="X-UA-Compatible" content="chrome=1">
+                    
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi">
+                        <link rel="stylesheet" href="./Sand Trap - Put It in the Pail!_files/compressed-en-US-10420134868.css" type="text/css">
+                            
+    <body>
+        <div id="Logo">
+            <a class="Logo" href="www.Network Design and Management.com">Network Design and Management</a></div>
+        <div id="bdiv">
+            <a href="./index.html" id="btn" class="btn btn-info" role="button">Go Next</a>
+            <button type="button" id="Cbtn" onclick="Visibility()" class="btn btn-info">Cancel</button>
+        </div>
+  <div onload="loadPage();" onselectstart="return false;" id="body" style="font-size: 0.871667em;">
+
+<audio id="audio" autoplay="" loop="">
+    <source src="a/bg.mp3" type="audio/mp3">
+        <source src="a/bg.ogg" type="audio/ogg">
+            </audio>
+
+<div id="play-area" style="height: 440px; width: 722.857px; margin-top: -93px; margin-left: -361px;">
+    <img src="./Sand Trap - Put It in the Pail!_files/bg.png" alt="" id="bg">
+        <h1 id="title"><img src="data:image/png;base64,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" alt="Sand Trap - Put It in the Pail"></h1>
+        <div id="testing"></div>
+        <canvas id="cvs" width="523" height="610"></canvas>
+        <div id="levelLoader" style="display: none;"><canvas width="386" height="386"></canvas><canvas width="386" height="386"></canvas><canvas width="26" height="26"></canvas><canvas width="14" height="74"></canvas><canvas width="74" height="14"></canvas><canvas width="26" height="26"></canvas></div>
+        <ul id="tool-menu">
+            <li><a href="javascript:showMenu();">Levels</a></li>
+            <li><a href="javascript:if(onMenu){showMenu();} else {ll(currentLevel)};">Reset</a></li>
+            <li><a href="javascript:showOptions();">Options</a></li>
+            <li><a href="javascript:showHelp();">?</a></li>
+            
+            <li id="credit" style="float: right;"><a href="javascript:showCredits();"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAVCAYAAAAElr0/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuNUmK/OAAAAJASURBVFhHzVe7TgJBFIXWxILCjpIECgoSEgKGglIqEr+ALwD+QGs/QBsKKysTYgyFia2xsLGx0IZKYyyMjYVPPGc9Q5bNzILswnqTk7tzZ+6dOTt3XqnUCmQ8Hg+BZcpwBTRSKTF4h74Dbi2ati8HU9qDfmxv4jDueJVERrbOMIY6cAp8isgD9D5ATaGd9XWH/yhRIui8CpwDHxrwNfQWsM4BU6tMO4Xt2L7qJ4RyMkTQcRE4Ad40wCvoJpB2/PG06tmOQj/6F0X4l4gql5pj6mMqtWAbyF4KEoB9w2Irqf3AOiMJEumo74YZGMo14Ah4lq756hpq3/lvRNoa2C70NnBpfmpA0856tqO0Q4k4gtDcVS4yjykXjlw2IXKWtGBdMLUMES7ib4D6DDhUIGqW/fWRiNA5B8RCBHEyQAu40YC5eHlglvXDerL3VC6r3mwO9KN/Zu7Fzr+voCQRlcg9YuwAT4rJ8+EYqARSZYqIb41U1N6cN4zDdGPc8F0rZiIav7eQ94CsI0WtRHyEsvJnnImEbr9LIpIPu06gz1AiPkL5pIkUYiJSSJqIt4hd8ocZMTPn8Zmklp+d5Zu7FjGPuLZf49uPiUjfOiMhI/TOEW113TmYuIi8wvcFeATWoswI/RWH8Rg3viuWj6DzQESbA7VrRSTSUhzGGyVBZBOd8iHEQ827rltuAbO2X17v6c84jLcYETiaQ9KaZSHXF/NC9F50EB5kfPkFYQ5Malu9dwCKCOsXeyHOINJ0EFn6m/0Hlu+IJzT1bP8AAAAASUVORK5CYII=" alt="Credits: By Gopherwood Studios"></a></li>
+            <li>
+                <a href="javascript:toggleSound();" id="audio-toggle">
+                    <img id="audio-on" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuNUmK/OAAAAEdSURBVDhPY2DAAf7//88DxBuA+D8eNTn45FH0ARUuBynGpgEolgjENUBsDMQPgbgMl6VgcaCC8zDDcBi4Ayj+Bqr2KJB9H6uBQAleIF6DbBiygVDx+VCDQNzJSOw2mGukgBJToXgtumFoBuYC+deBWBOIS4H4EhArQb1/FkhLgbz3CZsh2LwMFGODirsDaWEo2wpIK0DZuiADCQLk8AEqToC5GkjDYxnIrgSLEzQNpAgJjBqINQw/EwpHWBASG8ugdDgNitdhMxzJQJCLbgCxFhCXAPFlIAalw2ogPgfEUuj5lw8oSFlOwZYHgYZeQHYpuhqgHHF5GS29rYAZisXAJKBcLRAbAfEDIC7HW9pAMzyooNgIyxU4fIJRHgIAkb0gHV3F5jcAAAAASUVORK5CYII=" alt="Turn Music Off">
+                        <img id="audio-off" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuNUmK/OAAAACESURBVDhPY2DAAf7//88DxBuA+D8uNSSJA81ZDjKMKgYCDTkPM4wiA4GaeYF4DbJhJBsI1CAFxFOheC26YeQY+AmbIWR7mZBh5LiQoJmkJo8RaOBnQn4mNQxB6XAaFK+jOB0i2w40jI/inILNO0BDL5CdsPEUXyuoVtqALIEWFBtJzSkAqOG4B+4zPwoAAAAASUVORK5CYII=" alt="Turn Music On">
+                            </a>
+            </li>
+        </ul>
+        <div id="message-box" style="width: 33%; margin-left: -16%; height: 10%; margin-top: -5%;"><p>It's getting pretty sandy.</p></div>
+        <div id="time"></div>
+        <a id="cgdc8" title="Casual Gameplay Design Competition #8" href="http://jayisgames.com/cgdc8" target="blank"><img src="data:image/png;base64,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" alt="Casual Gameplay Design Competition #8"></a>
+        <div id="play-now" style="bottom: -8%;"><a href="javascript:ll(topLevel);clearPlayNow();" class="button">Let's Play »</a></div>
+        <div class="notification-left hide"></div><div class="notification-right hide"></div></div>
+</div>
+<script type="text/javascript" charset="UTF-8" src="./Sand Trap - Put It in the Pail!_files/compressed-en-US-10420134868.js"></script>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script><script src="./Sand Trap - Put It in the Pail!_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var pageTracker;
+    try {
+        pageTracker = _gat._getTracker("UA-1007897-2");
+        pageTracker._trackPageview('/sand-trap-v10420134868');
+    } catch(err) {
+        pageTracker = false;
+    }
+</script>
+<!-- <script type="text/javascript" src="http://bx.gamemix.com/promote?action=embed&partnerId=6788242&siteId=6873691"></script>-->
+
+
+
+
+<script src="iOS-orientation-demo.js"></script>
+</body>
+</html>

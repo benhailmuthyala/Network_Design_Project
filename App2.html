@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>iOS Orientation Test</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,ASP,XML,DOM,Bootstrap,Web development,W3C,tutorials,programming,training,learning,quiz,primer,lessons,references,examples,source code,colors,demos,tips">
+                    <meta name="Description" content="Well organized and easy to understand Web bulding tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, and XML.">
+                        <link rel="icon" href="http://www.w3schools.com/favicon.ico" type="image/x-icon">
+                            <link rel="stylesheet" href="./jQuery Mobile Tutorial_files/w3.css">
+                                
+                                <script src="./jQuery Mobile Tutorial_files/osd.js"></script><script src="./jQuery Mobile Tutorial_files/expansion_embed.js"></script><script async="" src="./jQuery Mobile Tutorial_files/async-ads.js"></script><script type="text/javascript" async="" src="./jQuery Mobile Tutorial_files/cse.js"></script><script async="" type="text/javascript" src="./jQuery Mobile Tutorial_files/gpt.js"></script><script async="" src="./jQuery Mobile Tutorial_files/analytics.js"></script>
+                                <script src="./jQuery Mobile Tutorial_files/pubads_impl_86.js" async=""></script><link rel="prefetch" href="http://tpc.googlesyndication.com/safeframe/1-0-2/html/container.html"><script src="./jQuery Mobile Tutorial_files/jsapi" type="text/javascript"></script><link type="text/css" href="./jQuery Mobile Tutorial_files/default+en.css" rel="stylesheet"><link type="text/css" href="./jQuery Mobile Tutorial_files/default.css" rel="stylesheet"><script type="text/javascript" src="./jQuery Mobile Tutorial_files/default+en.I.js"></script>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <style>
+                    .Logo {
+                        font-family: sans-serif;
+                        font-size: 16px;
+                        text-decoration:none;
+                        line-height: 3;
+                        letter-spacing:3px;
+                        color:#555555;
+                        display:block;
+                        position:absolute;
+                        top:1%;
+                        left:7%;
+                        padding-left:2px;
+                    }
+                #Logo {
+                    width:414px;
+                    height:66px;
+                }
+                #bdiv {
+                    width: 414px;
+                    height:46px;
+                }
+                #btn {
+                    visibility: hidden;
+                    margin-left: 25%;
+                    margin-top: 4px;
+                }
+                #Cbtn {
+                    visibility: hidden;
+                    margin-top: 4px;
+                }
+                </style>
+                </head>
+    <script>
+        var numOrientationChanges = 0,
+        lastOrientation,
+        startTime = + new Date(),
+        timer;
+        
+        
+        function Visibility() {
+            document.getElementById("btn").style.visibility = "hidden"
+            document.getElementById("Cbtn").style.visibility = "hidden"
+            
+        }
+    
+    
+    function readDeviceOrientation() {
+        
+        var orientationLabel,
+        curTime = + new Date() - startTime;
+        
+        if (Math.abs(window.orientation) === 90) {
+            // Landscape
+            document.getElementById("btn").href="./App3.html";
+            document.getElementById("btn").style.visibility = "visible"
+            document.getElementById("Cbtn").style.visibility = "visible"
+            // Landscape+ game
+        } else {
+            // Portrait
+            document.getElementById("btn").href="./App2.html";
+            document.getElementById("btn").style.visibility = "visible"
+        }
+        
+        if (lastOrientation !== window.orientation) {
+            
+            if (numOrientationChanges === 0) {
+                document.getElementById("btn").href="./index.html";
+                document.getElementById("btn").style.visibility = "visible";
+                
+            } else if (numOrientationChanges === 1) {
+                document.getElementById("btn").href="./index.html";
+                document.getElementById("btn").style.visibility = "visible";
+            }
+            lastOrientation = window.orientation;
+            numOrientationChanges += 1;
+        }
+    }
+    
+    window.onorientationchange = readDeviceOrientation;
+    
+        </script>
+    <body>
+        <div id="Logo">
+            <a class="Logo" href="www.Network Design and Management.com">Network Design and Management</a></div>
+        <div id="bdiv">
+            <a href="./index.html" id="btn" class="btn btn-info" role="button">Go Back</a>
+            <button type="button" id="Cbtn" onclick="Visibility()" class="btn btn-info">Cancel</button>
+        </div>
+        
+        <iframe src="./jQuery Mobile Tutorial_files/tryjqmob_default.html" scrolling="no" frameborder="0" width="100%" height="532px"></iframe>
+        
+        
+        <script src="iOS-orientation-demo.js"></script>
+    </body>
+</html>

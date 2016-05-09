@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <title>iOS Orientation Test</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                
+                <title>2048</title>
+                
+                <link href="./2048_files/main.css" rel="stylesheet" type="text/css">
+                    <link rel="shortcut icon" href="http://gabrielecirulli.github.io/2048/favicon.ico">
+                        <link rel="apple-touch-icon" href="http://gabrielecirulli.github.io/2048/meta/apple-touch-icon.png">
+                            <link rel="apple-touch-startup-image" href="http://gabrielecirulli.github.io/2048/meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+                                <link rel="apple-touch-startup-image" href="http://gabrielecirulli.github.io/2048/meta/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+                                    <meta name="apple-mobile-web-app-capable" content="yes">
+                                        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                                            
+                                            <meta name="HandheldFriendly" content="True">
+                                                <meta name="MobileOptimized" content="320">
+                                                    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+                                                        <meta name="format-detection" content="telephone=no">
+                                                            
+                                                            <meta name="apple-itunes-app" content="app-id=868076805">
+                                                                
+                                                                <meta property="og:title" content="2048">
+                                                                    <meta property="og:site_name" content="2048">
+                                                                        <meta property="og:description" content="Join the numbers and get to the 2048 tile! Careful: this game is extremely addictive!">
+                                                                            <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png">
+                                                                                
+                                                                                <meta name="twitter:card" content="app">
+                                                                                    <meta name="twitter:site" content="@gabrielecirulli">
+                                                                                        <meta name="twitter:title" content="2048">
+                                                                                            <meta name="twitter:description" content="Join the numbers and get to the 2048 tile! Careful: this game is extremely addictive!">
+                                                                                                <meta name="twitter:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png">
+                                                                                                    <meta name="twitter:url" content="http://gabrielecirulli.github.io/2048/">
+                                                                                                        <meta name="twitter:app:country" content="US">
+                                                                                                            <meta name="twitter:app:name:iphone" content="2048">
+                                                                                                                <meta name="twitter:app:id:iphone" content="868076805">
+                                                                                                                    <meta name="twitter:app:url:iphone" content="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805">
+                                                                                                                        <meta name="twitter:app:name:ipad" content="2048">
+                                                                                                                            <meta name="twitter:app:id:ipad" content="868076805">
+                                                                                                                                <meta name="twitter:app:url:ipad" content="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805">
+                                                                                                                                    <meta name="twitter:app:name:googleplay" content="2048">
+                                                                                                                                        <meta name="twitter:app:id:googleplay" content="com.gabrielecirulli.app2048">
+                                                                                                                                            <meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048">
+                                                                                                                                                <script type="text/javascript" charset="utf-8" async="" src="./2048_files/button.71000885400e222c3c0eec823f8f93f0.js"></script>
+        <style>
+            .Logo {
+                font-family: sans-serif;
+                font-size: 16px;
+                text-decoration:none;
+                line-height: 3;
+                letter-spacing:3px;
+                color:#555555;
+                display:block;
+                position:absolute;
+                top:1%;
+                left:7%;
+                padding-left:2px;
+            }
+            #Logo {
+                width:414px;
+                height:66px;
+            }
+            #bdiv {
+                width: 414px;
+                height:46px;
+            }
+            #btn {
+                visibility: hidden;
+                margin-left: 25%;
+                margin-top: 4px;
+            }
+            #Cbtn {
+                visibility: hidden;
+                margin-top: 4px;
+            }
+        </style>
+    </head>
+    <script>
+        var numOrientationChanges = 0,
+        lastOrientation,
+        startTime = + new Date(),
+        timer;
+        
+        
+        function Visibility() {
+            document.getElementById("btn").style.visibility = "hidden"
+            document.getElementById("Cbtn").style.visibility = "hidden"
+
+        }
+
+        
+        function readDeviceOrientation() {
+            
+            var orientationLabel,
+            curTime = + new Date() - startTime;
+            
+            if (Math.abs(window.orientation) === 90) {
+                // Landscape
+                document.getElementById("btn").href="./App3.html";
+                document.getElementById("btn").style.visibility = "visible"
+                document.getElementById("Cbtn").style.visibility = "visible"
+				// Landscape+ game
+            } else {
+                // Portrait
+                document.getElementById("btn").href="./App2.html";
+                document.getElementById("btn").style.visibility = "visible"
+            }
+            
+            if (lastOrientation !== window.orientation) {
+                
+                if (numOrientationChanges === 0) {
+                    document.getElementById("btn").href="./App1.html";
+                    document.getElementById("btn").style.visibility = "visible";
+                    
+                } else if (numOrientationChanges === 1) {
+                    document.getElementById("btn").href="./index.html";
+                    document.getElementById("btn").style.visibility = "visible";
+                }
+                lastOrientation = window.orientation;
+                numOrientationChanges += 1;
+            }
+        }
+    
+    window.onorientationchange = readDeviceOrientation;
+    
+    </script>
+    <body>
+        <div id="Logo">
+        <a class="Logo" href="www.Network Design and Management.com">Network Design and Management</a></div>
+        <div id="bdiv">
+            <a href="./index.html" id="btn" class="btn btn-info" role="button">Go Next</a>
+            <button type="button" id="Cbtn" onclick="Visibility()" class="btn btn-info">Cancel</button>
+        </div>
+        <div class="container">
+            <div class="heading">
+                <h1 class="title">2048</h1>
+                <div class="scores-container">
+                    <div class="score-container">0</div>
+                    <div class="best-container">0</div>
+                </div>
+            </div>
+            
+            <div class="above-game">
+                <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+                <a class="restart-button">New Game</a>
+            </div>
+            
+            <div class="app-notice">
+                <span class="notice-close-button">x</span>
+                <p><strong class="important">New:</strong> Get the new 2048 app for <a href="https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805" target="_blank">iOS</a> and <a href="https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048" target="_blank">Android!</a></p>
+            </div>
+            
+            <div class="game-container">
+                <div class="game-message">
+                    <p></p>
+                    <div class="lower">
+                        <a class="keep-playing-button">Keep going</a>
+                        <a class="retry-button">Try again</a>
+                        <div class="score-sharing"></div>
+                        <div class="mailing-list">
+                            <!-- MailChimp Signup Form -->
+                            <form action="http://gabrielecirulli.us8.list-manage.com/subscribe/post?u=991201206817cfb4e4247ed6c&amp;id=7928ea817b" method="post" name="mc-embedded-subscribe-form" class="mailing-list-form" target="_blank">
+                                <strong>Get email updates from Gabriele</strong>
+                                
+                                <input type="email" value="" name="EMAIL" class="mailing-list-email-field" placeholder="Your email address" spellcheck="false">
+                                    
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -9999px;">
+                                        <input type="text" name="b_991201206817cfb4e4247ed6c_7928ea817b" value="">
+                                            </div>
+                                    
+                                    <input type="submit" value="Go" name="subscribe" class="mailing-list-subscribe-button">
+                                        </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+                
+                <div class="tile-container"><div class="tile tile-2 tile-position-1-3 tile-new"><div class="tile-inner">2</div></div><div class="tile tile-2 tile-position-4-3 tile-new"><div class="tile-inner">2</div></div></div>
+            </div>
+            
+
+
+                
+            </div>
+        </div>
+        
+        <script src="./2048_files/bind_polyfill.js"></script>
+        <script src="./2048_files/classlist_polyfill.js"></script>
+        <script src="./2048_files/animframe_polyfill.js"></script>
+        <script src="./2048_files/keyboard_input_manager.js"></script>
+        <script src="./2048_files/html_actuator.js"></script>
+        <script src="./2048_files/grid.js"></script>
+        <script src="./2048_files/tile.js"></script>
+        <script src="./2048_files/local_storage_manager.js"></script>
+        <script src="./2048_files/game_manager.js"></script>
+        <script src="./2048_files/application.js"></script>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+             
+             ga("create", "UA-42620757-2", "gabrielecirulli.github.io");
+             ga("send", "pageview");
+            </script>
+        
+ 
+
+        
+        <script src="iOS-orientation-demo.js"></script>
+    </body>
+</html>

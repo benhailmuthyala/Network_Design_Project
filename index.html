@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://www.w3schools.com/ -->
+<html lang="en-US" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>W3Schools Online Web Tutorials</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML,CSS,JavaScript,DOM,jQuery,ASP,PHP,SQL,XML,Bootstrap,Web,W3C,tutorials,programming,development,training,learning,quiz,primer,lessons,reference,examples,source code,colors,demos,tips,w3c">
+<link rel="icon" href="http://www.w3schools.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./IJCNS_2015040916245728-4_files/w3.css">
+    <link rel="stylesheet" href="./IJCNS_2015040916245728-4_files/css/bootstrap.min.css">
+        <script async="" src="./IJCNS_2015040916245728-4_files/js/bootstrap.min.js"></script>
+        <script async="" src="./IJCNS_2015040916245728-4_files/js/bootstrap.js"></script>
+        <script async="" src="./IJCNS_2015040916245728-4_files/js/jquery-1.12.3.min.js"></script>
+<script async="" src="./IJCNS_2015040916245728-4_files/async-ads.js"></script><script async="" src="./IJCNS_2015040916245728-4_files/analytics.js"></script><script type="text/javascript" async="" src="./IJCNS_2015040916245728-4_files/cse.js"></script><script>
+(function() {
+  var cx = '012971019331610648934:m2tou3_miwy';
+  var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+})();
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+<style>
+body {
+  font-size:16px;
+}
+h1 {
+  font-size:80px;
+  color:#555555;
+}
+h2 {
+  font-size:40px;
+  color:#555555;
+}
+.top {
+  height:68px;
+  padding-top:20px;
+  line-height:50px;
+  overflow:hidden;
+  font-size:15px;
+}
+.Logo {
+    font-family: sans-serif;
+    font-size: 16px;
+    text-decoration:none;
+    line-height: 1;
+    letter-spacing:3px;
+    color:#555555;
+    display:block;
+    position:absolute;
+    top:4%;
+    left:11%;
+    padding-left:2px;
+}
+.w3schools-logo .dotcom {
+    color:#C52A2A;
+}
+.w3schools-logo:hover {
+    color:#555555;
+}
+
+.w3-topnav {
+  padding:0 10px;
+}
+.w3-topnav a{
+  float:left;
+  letter-spacing:4px;
+  font-size:17px;
+  line-height:71px;
+}
+.w3-topnav a:hover {
+  background-color:white;
+  color:#C52A2A;
+}
+.topnavlinks {
+  width:auto;
+  float:right;
+}
+a.topnav-localicons {
+  font-size:20px !important;
+}
+a.topnav-icons {
+  font-size:20px;
+}
+#menubtn {
+  float:left;
+  font-size:16px;
+}
+.w3-sidenav {
+  overflow:hidden;
+  position:absolute !important;
+  display:none;
+  background-color:transparent;
+}
+.w3-sidenav a {
+  padding:0 20px;
+  color:#555555;
+}
+.w3-sidenav h2 {
+  font-size:20px;
+  padding-left:20px;
+  color:#000000;
+}
+.w3-dropnav {
+  display:none;
+  padding-bottom:40px;
+}
+.w3-dropnav h3 {
+  padding-top:20px;
+}
+.w3-closebtn {
+  padding:10px 20px !important;
+  position:absolute;
+  right:0;
+}
+#nav_menu-xs {
+  background-color:#f1f1f1;
+  text-align:center;
+}
+#nav_menu-xs a {
+  color:#000000;
+  margin:10px;
+  display:block;
+  font-size:16px;
+  letter-spacing:4px;
+  color:inherit;
+  text-decoration:none;
+}
+#nav_menu-xs .w3-closebtn {
+  margin:0;
+}
+.w3-closebtn:hover {
+  background-color:#cccccc;
+}
+#sectionxs_tutorials, #sectionxs_references, #sectionxs_examples {
+  background-color:#ffffff;
+}
+#sectionxs_tutorials .w3-closebtn, #sectionxs_references .w3-closebtn, #sectionxs_examples .w3-closebtn {
+  display:none;
+}
+#sectionxs_tutorials a, #sectionxs_references a, #sectionxs_examples a {
+  letter-spacing:normal;
+}
+#nav_translate, #nav_search {
+  display:none;
+}
+#nav_translate a {
+  display:inline;
+}
+#googleSearch {
+  color:#000000;
+}
+.searchdiv {
+  max-width:400px;
+  margin:auto;
+  text-align:left;
+  font-size:16px;
+}
+div.cse .gsc-control-cse, div.gsc-control-cse {
+  background-color:transparent;
+  border:none;
+  padding:0px;
+  margin:0px;
+}
+td.gsc-search-button input.gsc-search-button {
+  background-color:#555555;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
+  box-sizing:content-box;
+  line-height:normal;
+}
+.gsc-tabsArea div {
+  overflow:visible; 
+}
+.gsst_a .gscb_a {
+  margin-top:3px;
+}
+.section{
+  padding:4%;
+}
+.section p {
+  color:#555555;
+  font-size:30px;
+	margin:0 0 10px !important;
+}
+.w3-code {
+  padding:12px 16px;
+  border-left:4px solid #4CAF50 !important;
+}
+.sectionbtn {
+  background-color:#555555;
+  margin:10px 5px 5px 5px;
+}
+.section.onethird p {
+  font-size:20px;
+}
+.section.onethird .w3-card-2 {
+  padding:15px 10px;
+  height:260px;
+}
+footer a {
+  text-decoration:none;
+}
+.about {
+  text-align:center;
+  margin:20px auto auto auto;
+  font-size:14px;
+  letter-spacing:4px;
+  word-spacing: 10px;
+  color:#555555;
+}
+#fblikeframe {
+  display:none;
+}
+#popupframe {
+  position:fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  background-color:#000000;
+  opacity:0.5;
+  z-index:999;
+}
+#popupDIV {
+  position:fixed;
+  height:40%;
+  width:40%;
+  min-width:310px;
+  min-height:250px;
+  top:30%;
+  left:30%;
+  background-color:#ffffff;
+  z-index:9999;
+}
+@font-face {
+font-family: 'fontawesome';
+src:url('../lib/fonts/fontawesome.eot?14663396');
+src:url('../lib/fonts/fontawesome.eot?14663396#iefix') format('embedded-opentype'),
+    url('../lib/fonts/fontawesome.woff?14663396') format('woff'),
+    url('../lib/fonts/fontawesome.ttf?14663396') format('truetype'),
+    url('../lib/fonts/fontawesome.svg?14663396#fontawesome') format('svg');
+font-weight:normal;
+font-style:normal;
+}
+.fa {
+  display:inline-block;
+  font:normal normal normal 14px/1 FontAwesome;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transform:translate(0,0);
+}
+.fa-2x {
+  font-size:2em;
+}
+.fa-home:before {content: '\e800'; }
+.fa-globe:before {content: '\e801'; }
+.fa-search:before {content: '\e802'; }
+.fa-thumbs-o-up:before {content: '\e803'; }
+.fa-left-open:before {content: '\e804'; }
+.fa-right-open:before {content: '\e805'; }
+.fa-facebook-square:before { content: '\e806'; }
+.fa-google-plus-square:before { content: '\e807'; }
+.fa-twitter-square:before { content: '\e808'; }
+.fa-caret-down:before { content: '\e809'; }
+.fa-caret-up:before { content: '\e80a'; }
+
+@media only screen and (min-width :1100px) {
+  #main {
+    margin-left:230px;
+  }
+  #sidemenu {
+    width:230px;
+    display:block;
+  }
+}
+@media only screen and (min-width :992px) {
+  .about {
+    text-align:right;
+    margin:auto;
+  }
+  .css-hide-when-large {
+      display:none;
+  }  
+}
+@media only screen and (max-width :991px) {
+  .topsection {
+    text-align:center;
+  }
+  .topsection img, .topsection div {
+    float:none;
+    margin:auto;
+  }
+  .top {
+    height:100px;
+  }
+  .top img {
+    display:block;
+    margin:auto;
+  }
+  .top .w3schools-logo {
+    position:relative;
+    top:0;
+    width:100%;
+    text-align:center;
+    margin:auto;
+  }  
+  .toptext {
+    width:100%;
+    text-align:center;
+  }
+  .css-hide-when-small {
+    display:none;
+  }
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size:50px;
+  }
+  .section p {
+    font-size:18px;
+  }
+  .sectionexample {
+    display:none !important;
+  }
+  .section {
+    padding:0 0 30px 0;
+  }
+  .onethird {
+    padding:30px;
+  }
+  #navbtn_tutorials, #navbtn_references, #navbtn_examples {
+    display:none !important;
+  }
+  #menubtn {
+    background-repeat:repeat-x !important;/*To test for devices less than 768px*/
+  }
+  .w3-sidenav {
+    display:none !important;
+  }
+  #main {
+    margin-left:0% !important;
+  }
+}
+@media screen and (min-width: 769px) {
+  #nav_menu-xs {
+    display:none !important;
+  }
+}
+@media screen and (max-width:600px) {
+  .top {
+    height:68px;
+  }
+  .toptext {
+    display:none;
+  }
+  .w3-dropnav .w3-col {
+    height:auto;
+  }
+}
+.w3-theme {
+  color:#fff !important;
+  background-color:#C52A2A !important;
+}
+</style>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./IJCNS_2015040916245728-4_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./IJCNS_2015040916245728-4_files/main.js"></script><script src="./IJCNS_2015040916245728-4_files/jsapi" type="text/javascript"></script><script type="text/javascript" charset="UTF-8" src="./IJCNS_2015040916245728-4_files/element_main.js"></script><link type="text/css" href="./IJCNS_2015040916245728-4_files/default+en.css" rel="stylesheet"><link type="text/css" href="./IJCNS_2015040916245728-4_files/default.css" rel="stylesheet"><script type="text/javascript" src="./IJCNS_2015040916245728-4_files/default+en.I.js"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #D9D9D9;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #2F5BB7;
+background-color: #357AE8;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #CCCCCC;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #CCCCCC;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #1155CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #1155CC;
+}
+.gsc-cursor-page {
+color: #1155CC;
+}
+a.gsc-trailing-more-results:link {
+color: #1155CC;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #333333;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #1155CC;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #1155CC;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #F6F6F6;
+background-color: #F6F6F6;
+}
+.gsc-completion-title {
+color: #1155CC;
+}
+.gsc-completion-snippet {
+color: #333333;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #1155CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #333333;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #009933;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head><body style="position: relative; min-height: 100%; top: 0px;">
+
+<div class="w3-container top">
+
+<!--<a href='http://www.w3schools.com'><img src='/images/w3schools.png' alt='W3Schools.com' class='w3-fluid'></a>-->
+
+<a class="Logo" href="www.Network Design and Management.com">Network Design and Management</span></a>
+
+</div>
+
+<div class="w3-theme w3-card-2 w3-topnav w3-right-align w3-slim">
+  <a id="menubtn" href="javascript:void(0);" class="topnav-localicons w3-left" onclick="w3_open()" title="Menu" style="color:#C7C7C7">☰</a>
+  <div class="topnavlinks">
+  <a  id="navbtn_tutorials" href="./index.html">Home </a>
+  <a href="./About.html" id="navbtn_references" >About </a>
+  <a href="./App.html" id="navbtn_examples" >App </a>
+  <a href="javascript:void(0);" class="topnav-icons fa fa-search w3-right" onclick="w3_open_nav(&#39;search&#39;)" title="Search W3Schools"></a>
+  <a href="javascript:void(0);" class="topnav-icons fa fa-globe w3-right" onclick="w3_open_nav(&#39;translate&#39;)" title="Translate W3Schools"></a>
+  
+  </div>
+</div>
+
+<div id="nav_menu-xs" class="w3-card-2" style="display: none;">
+  <a href="javascript:void(0)" onclick="w3_close_nav(&#39;menu-xs&#39;)" class="w3-closebtn w3-large">×</a><br>
+  <div class="w3-container w3-padding-hor-32">
+  <a onclick="open_xs_menu(&#39;tutorials&#39;)" href="./index.html">Home </a>
+  <div id="sectionxs_tutorials"></div>
+  <a onclick="open_xs_menu(&#39;references&#39;)" href="./About.html">About </a>
+  <div id="sectionxs_references"></div>
+  <a onclick="open_xs_menu(&#39;examples&#39;)" href="./App.html">App </a>
+  <div id="sectionxs_examples"></div>
+  </div>
+</div>
+
+
+<div id="main">
+<div class="w3-row">
+  <div class="w3-col l6 w3-center section">
+  <h1>My Project</h1>
+  <p>This app captures gestures and shows results based on the gesture recognized.</p>
+  
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              ...
+          </div>
+      </div>
+  </div>
+  <a href="./App.html" class="w3-btn sectionbtn">Run Application</a>
+  </div>
+  <div class="w3-col l6 section sectionexample">
+  </div>
+</div>
+
+<br>
+<footer class="w3-container w3-light-grey w3-center w3-padding-jumbo w3-text-grey">
+  <br>
+  <p class="w3-medium">
+  I have built this application using the web interface of W3schools. I have agreed to their copyrights.
+  While using this site, you agree to have read and accepted our <a href="http://www.w3schools.com/about/about_copyright.asp">terms of use</a>, <a href="http://www.w3schools.com/about/about_privacy.asp">cookie and privacy policy</a>.<br>
+  <a href="http://www.w3schools.com/about/about_copyright.asp" class="w3-hover-text-black">Copyright 1999-2016</a> by Refsnes Data. All Rights Reserved.<br><br>
+  </p>
+  <a href="javascript:void(0);" onclick="clickFBLike()" title="Like W3Schools on Facebook" class="w3-hover-text-indigo"><i class="fa fa-thumbs-o-up fa-2x"></i></a>
+  <div id="fblikeframe">
+    <div id="popupframe"></div>
+    <div id="popupDIV"></div>
+  </div>
+</footer>
+</div>
+<script>
+function w3_open() {
+  if (w3_getStyleValue(document.getElementById("menubtn"), "background-repeat") == "repeat-x") {
+    if (document.getElementById("nav_menu-xs").style.display == "block") {
+        document.getElementById("nav_menu-xs").style.display = "none";
+        return;
+    }
+    document.getElementById("nav_menu-xs").style.display = "block";
+    return;
+  }
+  if (w3_getStyleValue(document.getElementById("sidemenu"), "display") == "block") {
+    w3_close();
+    return;
+  }
+  document.getElementById("main").style.marginLeft = "230px";
+  document.getElementById("sidemenu").style.width = "230px";
+  document.getElementById("main").style.transition = ".4s";
+  document.getElementById("sidemenu").style.display = "block";
+}
+function w3_getStyleValue(elmnt,style) {
+  if (window.getComputedStyle) {
+    return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+  } else {
+    return elmnt.currentStyle[style];
+  }
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("sidemenu").style.display = "none";
+}
+function w3_open_nav(x) {
+  if (document.getElementById("nav_" + x).style.display == "block") {
+    w3_close_nav(x);
+  } else {
+    w3_close_nav("tutorials");
+    w3_close_nav("references");
+    w3_close_nav("examples");
+    w3_close_nav("translate");
+    w3_close_nav("search");
+    document.getElementById("nav_" + x).style.display = "block";
+    if (document.getElementById("navbtn_" + x)) {
+        document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "none";
+        document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "inline";
+    } 
+    if (x == "search") {
+      if (document.getElementById("gsc-i-id1")) {document.getElementById("gsc-i-id1").focus(); }
+    }
+  }
+}
+function w3_close_nav(x) {
+  document.getElementById("nav_" + x).style.display = "none";
+  if (document.getElementById("navbtn_" + x)) {
+    document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "inline";
+    document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "none";
+  }
+}
+function open_xs_menu(x) {
+  if (document.getElementById("sectionxs_" + x).innerHTML == "") {
+    document.getElementById("sectionxs_" + x).innerHTML = document.getElementById("nav_" + x).innerHTML;
+  } else {
+    document.getElementById("sectionxs_" + x).innerHTML = "";
+  }
+}
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({
+  pageLanguage: 'en',
+  autoDisplay: false,    
+  gaTrack: true,
+  gaId: 'UA-3855518-1',
+  layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+	}, 'google_translate_element');
+}
+function clickFBLike() {
+  document.getElementById("fblikeframe").style.display='block'
+  document.getElementById("popupDIV").innerHTML = "<iframe src='/fblike.asp?r=" + Math.random() + "' frameborder='no' style='height:200px;width:300px;opacity:1 !important;'></iframe><br><button onclick='hideFBLike()' class='w3-btn'>Close</button>";
+}
+function hideFBLike() {
+  document.getElementById("fblikeframe").style.display='none'
+}
+</script>
+<script src="./IJCNS_2015040916245728-4_files/w3codecolors.js"></script>
+<script src="./IJCNS_2015040916245728-4_files/element.js"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./IJCNS_2015040916245728-4_files/translate_24dp.png" width="20" height="20"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+ <iframe frameborder="0" class="goog-te-menu-frame skiptranslate" style="visibility: visible; box-sizing: content-box; width: 1030px; height: 263px; display: none;" src="./IJCNS_2015040916245728-4_files/saved_resource.html"></iframe><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 2px; display: none; top: 3px; position: absolute; left: -1px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>
